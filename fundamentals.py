@@ -1,5 +1,5 @@
 lista = ['pikachu','charmander','slowpock','bulbasaur','psyduck','jigglypuff','meowth','diglett']
-#print(lista)
+print(lista)
 
 #wypisz w petli for wszystkie elementy z listy po przecinku
 print(','.join([str(x) for x in range(5)]))
@@ -45,3 +45,44 @@ for values in kraje.values():
 #wypisz w petli for, wszystkie klucze
 for keys in kraje.keys():
    print(keys)
+
+
+#   add two new countries to the dict
+
+kraje.update({'UK': 'London'})
+kraje.update({'Norway': 'Oslo'})
+kraje["Ukraina"] = "Kijow"
+print(kraje)
+
+nowa_lista = ['Polska','Ukraina','Czechy']
+print(nowa_lista)
+
+# Wypisz w petli for Stolica x jest y
+
+stolica_polski = kraje.get('Polska')
+print(stolica_polski)
+
+for kraj in nowa_lista:
+    print(f"Stolica {kraj} to {kraje.get(kraj)}")
+    #print(f"Stolica {kraj} to {kraje[kraj]}")
+
+
+# add new items to list
+nowa_lista.append("Kolumbia")
+nowa_lista.append("Meksyk")
+print(nowa_lista)
+
+for ele in nowa_lista:
+    if ele in kraje.keys():
+        print(True)
+    else:
+        print(False)
+
+#remove item form list
+nowa_lista.remove("Czechy")
+print(nowa_lista)
+
+# remove key/val pair from dict
+print(kraje)
+del kraje['Czechy']
+print(kraje)

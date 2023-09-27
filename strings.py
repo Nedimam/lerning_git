@@ -36,3 +36,32 @@ for char in string_one:
     if char == "a":
         count+=1
 print(count)
+
+#print string all in caps lock
+print(string_one.upper())
+
+#print string in lower
+print(string_two.lower())
+
+#check if string starts with some word
+print(string_one.startswith('salatka'))
+
+#check if string ends with some word
+print(string_one.endswith('grecka'))
+
+#split string to get a list of words
+print(string_one.split(' '))
+
+#print all letters of a string starting with third 
+print(string_one[3:])
+
+#change string to a list of letters
+str_list = ([*string_one])
+
+#change one letter of a list from string
+str_list[6] = 'i'
+x = "".join(str_list)
+print(x)
+
+#use capitalise
+print(string_one.capitalize())
